@@ -2,3 +2,5 @@ build
 lib
 TAGS
 
+#IntelliJ IDEA
+.idea
