@@ -22,9 +22,17 @@ A Windows installer is available from GoGui's project page.
 
 ## Installation on Mac OS
 
-A Mac application bundle can be created by compiling GoGui from the sources (see below) and running
+Ensure that you have [Homebrew](http://brew.sh/) and the (OSX Developer Tools)[https://developer.apple.com/download/more/] installed.
 
-> <tt>ant gogui.app</tt>.
+1. Link the OSX Command Line developer tools to the root path.
+```
+sudo ln -s /Library/Developer/CommandLineTools/usr/bin /Developer/Tools
+```
+2. Install ant with `brew install ant`
+3. Install Dockbook XSL with `brew install docbook-xsl` (Currently using 1.79.1)
+4. Make a folder called `lib` and put `quaqua.jar` there.
+    * Tested with [quaqua-9.1.nested.zip](http://www.randelshofer.ch/quaqua/files/quaqua-9.1.nested.zip).
+5. Type `ant gogui.app -Ddocbook-xsl.dir=/usr/local/Cellar/docbook-xsl/1.79.1/docbook-xsl` (Replace the version number with your docbook version number)
 
 ## Compiling from the Sources
 
